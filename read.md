@@ -20,3 +20,11 @@ docker run \
     -d neo4j
 # utiliser le pilote Python officiel de Neo4j appelé « neo4j »:
     pip install neo4j
+
+
+# Télécharger et exécuter l’image Docker Elasticsearch:
+    docker run -p 9200:9200 -p 9300:9300 -d -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+# Information sur le cluster:
+    curl 0.0.0.0:9200/_cluster/health | jq
+# Infos sur les nœuds:
+    curl -X GET "http://0.0.0.0:9200/_cat/nodes?v"
