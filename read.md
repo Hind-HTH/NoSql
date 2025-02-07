@@ -10,6 +10,8 @@
 
 # Remarque: J'ai verifié le start et stop de container depuis Docker Desktop.
 
+# Docker mongo:
+docker run --name my-mongo -p 27017:27017 -d mongo
 
 # La partie neo4j:
 docker run \
